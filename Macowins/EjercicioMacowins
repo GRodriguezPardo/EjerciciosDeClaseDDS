@@ -1,0 +1,91 @@
+
+Requerimientos:
+	 - Saber precio de una prenda, que varia segun su estado, y saber su tipo
+	 - Registrar las ventas
+	 - Poder determinar las ganancias de un dia
+	 - Registrar para acda venta las prendas, su cantidad, fecha, forma de pago
+	 - Poder saber el total de cada venta, que varia segun su forma de pago
+
+Se eligio referenciar el estado de prenda por composicion ya que (supongo) que puede variar.
+Se eligio referencia la forma de pago en venta por composicion por simplicidad, pero se podria haber hecho por herencia.
+
+
+--------------------------------
+--------------------------------
+--------------------------------
+
+class Prenda {
+	const precioBase
+	var estado
+
+	method precio(){
+		return estado.precio(precioBase)
+	}
+}
+
+class Pantalon inherits Prenda{}
+class Saco inherits Prenda{}
+class Camisa inherits Prenda{}
+
+object nueva {
+	method precio(precioBase){
+		return precioBase
+	}
+}
+
+class Promocion{
+	const descuento
+
+	mehtod precio(precioBase){
+		return precioBase - descuento
+	}
+}
+
+object liquidacion{
+	metod precio(precioBase){
+		return precioBase/2
+	}
+}
+
+object Macowins{
+	const ventas = []
+
+	method ventasDelDia(unDia){
+		const ventasDelDia ventas.filter{venta => venta.fecha == unDia}
+		return ventasDelDia.map{venta ==> venta.ValorVenta}.sum()
+	}
+}
+
+class Venta{
+	const prendas = []
+	const fecha
+	const formaPago
+
+	method valorVenta(){
+		const precioTotal = self.precioTotal()
+		return formaPago.total(precioTotal)
+	}
+
+	method precioTotal(){
+		return prendas.map{prenda => prenda.precio()}.sum()
+	}
+
+	method cantidadPrendas(){
+		return prendas.length()
+	}
+}
+
+objetc efectivo{
+	method total(precio){
+		return precio
+	}
+}
+
+class Cuotas{
+	const cantidadCuotas
+	const coeficiente
+
+	method total(precio){
+		return precio + (cantidadCuotas * coeficiente + 0.01 * precio)
+	}
+}
