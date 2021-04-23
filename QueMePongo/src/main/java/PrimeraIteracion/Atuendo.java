@@ -9,4 +9,15 @@ public class Atuendo {
   public Atuendo() {
     this.prendas = Collections.emptyList();
   }
+
+  public void agregarPrenda(Prenda nuevaPrenda) {
+    if (this.prendas
+        .stream()
+        .allMatch(prenda -> prenda.combinaCon(nuevaPrenda))
+    ) {
+      prendas.add(nuevaPrenda);
+    } else {
+      throw new PrendaNoAgregable("La prenda no combina con el resto del atuendo");
+    }
+  }
 }
