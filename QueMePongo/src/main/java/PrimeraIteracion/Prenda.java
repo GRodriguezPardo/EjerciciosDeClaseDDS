@@ -26,6 +26,6 @@ public class Prenda {
   }
   public Boolean combinaCon(Prenda unaPrenda){
     //TODO
-    return Boolean.TRUE; //Hasta saber las condiciones
+    return Boolean.TRUE; //Hasta saber las condiciones retornamos TRUE siempre
   }
 }
