@@ -3,18 +3,16 @@ package PrimeraIteracion;
 import com.sun.istack.internal.NotNull;
 import com.sun.istack.internal.Nullable;
 
-
-
 public class Prenda {
   private final TipoPrenda tipo;
-  private final String material;
-  private final String colorPrincipal;
-  private final String colorSecundario;
+  private final Material material;
+  private final Color colorPrincipal;
+  private final Color colorSecundario;
 
   public Prenda(@NotNull TipoPrenda _tipo,
-                @NotNull String _material,
-                @NotNull String _colorPrincipal,
-                @Nullable String _colorSecundario){
+                @NotNull Material _material,
+                @NotNull Color _colorPrincipal,
+                @Nullable Color _colorSecundario){
     this.tipo = _tipo;
     this.material = _material;
     this.colorPrincipal = _colorPrincipal;
@@ -25,7 +23,7 @@ public class Prenda {
     return this.tipo.categoria();
   }
   public Boolean combinaCon(Prenda unaPrenda){
-    //TODO
-    return Boolean.TRUE; //Hasta saber las condiciones retornamos TRUE siempre
+    //TODO: Se debe cambiar este return en la proxima iteracion
+    return Boolean.TRUE;
   }
 }

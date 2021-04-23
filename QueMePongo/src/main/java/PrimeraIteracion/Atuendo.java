@@ -17,7 +17,7 @@ public class Atuendo {
     ) {
       prendas.add(nuevaPrenda);
     } else {
-      throw new PrendaNoAgregable("La prenda no combina con el resto del atuendo");
+      throw new PrendaNoCombinableException();
     }
   }
 }
