@@ -13,8 +13,9 @@ public class PrendaTipada {
   }
 
   public Prenda finalizarPrenda(Material material,
+                                PatronTela patron,
                                 Color colorPrincipal,
                                 Color colorSecundario){
-    return new Prenda(this.tipo,material,colorPrincipal,colorSecundario);
+    return new Prenda(this.tipo,material,patron,colorPrincipal,colorSecundario);
   }
 }

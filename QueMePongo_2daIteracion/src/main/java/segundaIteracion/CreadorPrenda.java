@@ -18,8 +18,9 @@ public class CreadorPrenda {
   }
 
   public Prenda finalizarPrenda(Material material,
+                                PatronTela patron,
                                 Color colorPrincipal,
                                 Color colorSecundario){
-    return prenda.finalizarPrenda(material,colorPrincipal,colorSecundario);
+    return prenda.finalizarPrenda(material,patron,colorPrincipal,colorSecundario);
   }
 }
