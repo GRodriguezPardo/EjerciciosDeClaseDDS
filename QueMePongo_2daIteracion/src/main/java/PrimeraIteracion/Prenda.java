@@ -1,4 +1,4 @@
-package PrimeraIteracion;
+package primeraIteracion;
 
 import com.sun.istack.internal.NotNull;
 import com.sun.istack.internal.Nullable;
@@ -12,7 +12,7 @@ public class Prenda {
   public Prenda(@NotNull TipoPrenda _tipo,
                 @NotNull Material _material,
                 @NotNull Color _colorPrincipal,
-                @Nullable Color _colorSecundario){
+                Color _colorSecundario){
     this.tipo = _tipo;
     this.material = _material;
     this.colorPrincipal = _colorPrincipal;
@@ -20,7 +20,7 @@ public class Prenda {
   }
 
   public CategoriaPrenda getCategoria() {
-    return this.tipo.categoria();
+    return this.tipo.getCategoria();
   }
   public Boolean combinaCon(Prenda unaPrenda){
     //TODO: Se debe cambiar este return en la proxima iteracion

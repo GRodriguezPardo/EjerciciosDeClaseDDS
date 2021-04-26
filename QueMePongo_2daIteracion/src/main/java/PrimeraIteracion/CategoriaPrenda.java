@@ -1,4 +1,4 @@
-package PrimeraIteracion;
+package primeraIteracion;
 
 import java.util.Arrays;
 import java.util.List;
