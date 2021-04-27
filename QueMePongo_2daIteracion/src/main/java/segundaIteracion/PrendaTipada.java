@@ -8,14 +8,14 @@ import primeraIteracion.TipoPrenda;
 public class PrendaTipada {
   private final TipoPrenda tipo;
 
-  public PrendaTipada(TipoPrenda _tipo){
+  public PrendaTipada(TipoPrenda _tipo) {
     this.tipo = _tipo;
   }
 
   public Prenda finalizarPrenda(Material material,
                                 PatronTela patron,
                                 Color colorPrincipal,
-                                Color colorSecundario){
-    return new Prenda(this.tipo,material,patron,colorPrincipal,colorSecundario);
+                                Color colorSecundario) {
+    return new Prenda(this.tipo, material, patron, colorPrincipal, colorSecundario);
   }
 }

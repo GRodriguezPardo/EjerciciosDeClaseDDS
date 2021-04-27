@@ -1,6 +1,7 @@
 package primeraIteracion;
 
-import com.sun.istack.internal.NotNull;
+import org.jetbrains.annotations.NotNull;
+import segundaIteracion.MaterialIncompatibleConTipoException;
 import segundaIteracion.PatronTela;
 
 public class Prenda {
@@ -14,12 +15,20 @@ public class Prenda {
                 @NotNull Material _material,
                 PatronTela _patron,
                 @NotNull Color _colorPrincipal,
-                Color _colorSecundario){
+                Color _colorSecundario) {
     this.tipo = _tipo;
-    this.material = _material;
-    if(_patron == null){
+    if (_material.compatibleCon(this.tipo)) {
+      this.material = _material;
+    } else {
+      throw new MaterialIncompatibleConTipoException(
+          "El material "
+          + _material
+          + " no puede aplicarse a una prenda de tipo "
+          + this.tipo);
+    }
+    if (_patron == null) {
       this.patron = PatronTela.LISA;
-    }else{
+    } else {
       this.patron = _patron;
     }
     this.colorPrincipal = _colorPrincipal;
@@ -29,7 +38,8 @@ public class Prenda {
   public CategoriaPrenda getCategoria() {
     return this.tipo.getCategoria();
   }
-  public Boolean combinaCon(Prenda unaPrenda){
+
+  public Boolean combinaCon(Prenda unaPrenda) {
     //TODO: Se debe cambiar este return en la proxima iteracion
     return Boolean.TRUE;
   }
