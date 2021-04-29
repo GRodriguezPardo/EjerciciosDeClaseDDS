@@ -11,7 +11,7 @@ public enum Material {
     ALGODON(TipoPrenda.PANTALON, TipoPrenda.REMERA, TipoPrenda.CAMISA),
     ACETATO(TipoPrenda.PANTALON);
 
-  List<TipoPrenda> tiposValidos;
+  private List<TipoPrenda> tiposValidos;
 
   Material(TipoPrenda ... tipos) {
     this.tiposValidos = Arrays.asList(tipos);
