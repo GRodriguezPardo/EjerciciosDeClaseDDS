@@ -1,5 +1,6 @@
 package primeraIteracion;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -7,7 +8,7 @@ public class Atuendo {
   private final List<Prenda> prendas;
 
   public Atuendo() {
-    this.prendas = Collections.emptyList();
+    this.prendas = new ArrayList<Prenda>();
   }
 
   public void agregarPrenda(Prenda nuevaPrenda) {
@@ -19,5 +20,11 @@ public class Atuendo {
     } else {
       throw new PrendaNoCombinableException();
     }
+  }
+
+  public Atuendo clone() {
+    Atuendo copia = new Atuendo();
+    this.prendas.forEach(prenda -> copia.agregarPrenda(prenda));
+    return copia;
   }
 }
