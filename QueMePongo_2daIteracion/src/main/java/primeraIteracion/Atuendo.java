@@ -24,7 +24,7 @@ public class Atuendo {
 
   public Atuendo clone() {
     Atuendo copia = new Atuendo();
-    this.prendas.forEach(prenda -> copia.agregarPrenda(prenda));
+    this.prendas.forEach(copia::agregarPrenda);
     return copia;
   }
 }
