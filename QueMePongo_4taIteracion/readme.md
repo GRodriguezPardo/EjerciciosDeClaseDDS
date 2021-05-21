@@ -1,0 +1,1 @@
+El requisito de asegurar la calidad sin que incurra en mas costos seria cumplido a traves de la creacion de tests. (Puede que estes viendo esto y todavia no los haya podido hacer, pero la idea seria esa)
