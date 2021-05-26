@@ -5,6 +5,7 @@ import primeraIteracion.Prenda;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Guardarropa{
@@ -16,6 +17,7 @@ public class Guardarropa{
   public Guardarropa(WeatherForecast _pronosticador, GeneradorSugerencias generadorSugerencias) {
     this.pronosticador = _pronosticador;
     this.generadorSugerencias = generadorSugerencias;
+    this.prendas = new ArrayList<>();
   }
 
   public List<Atuendo> generarSugerenciasPara(String ciudad, LocalDate fecha) throws IOException {
@@ -24,4 +26,7 @@ public class Guardarropa{
     return this.generadorSugerencias.generarSugerenciaDesde(prendasAcordes);
   }
 
+  public void agregarPrenda(Prenda prenda) {
+    this.prendas.add(prenda);
+  }
 }
