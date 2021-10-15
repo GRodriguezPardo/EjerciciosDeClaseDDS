@@ -1,0 +1,218 @@
+QMP Septima Iteracion:
+
+1) Ver prendas ----------
+Ruta REST:
+	Get /usuario/{id}/guardarropas/{id}/prendas
+
+Codigos de respuesta:
+	200, 404, 50X
+
+Posibles respuestas:
+	HTTP/1.1 404 Not Found
+	X-Powered-By: Express
+	Expires: -1
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 0
+	Vary: Accept-Encoding
+	Date: Tue, 21 Apr 2020 12:43:18 GMT
+	Connection: keep-alive
+	----------------------
+	HTTP/1.1 200 OK
+	X-Powered-By: Express
+	Expires: -1
+	Content-Type: application/json; charset=utf-8
+	Content-Length: 1237
+	Vary: Accept-Encoding
+	Date: Tue, 21 Apr 2020 13:05:09 GMT
+	Connection: keep-alive
+	[
+		{
+		id: {id}
+		tipo: <tipo>
+		color: <color>
+		material: <material>
+		},
+		{
+		id: {id}
+		tipo: <tipo>
+		color: <color>
+		material: <material>
+		}
+		...
+		{
+		id: {id}
+		tipo: <tipo>
+		color: <color>
+		material: <material>
+		}
+	]
+	
+
+2) Crear prenda -------------
+Ruta REST:
+	Post /usuario/{id}/guardarropas/{id}/prendas/{id}
+
+Informacion enviada:
+	{
+		id: {id}
+		tipo: <tipo>
+		color: <color>
+		material: <material>
+	}
+
+Codigos de respuesta:
+	201, 400, 50X
+
+Posibles respuestas:
+	HTTP/1.1 400 BAD REQUEST
+	X-Powered-By: Express
+	Expires: -1
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 0
+	Vary: Accept-Encoding
+	Date: Tue, 21 Apr 2020 12:43:18 GMT
+	Connection: keep-alive
+	----------------------
+	HTTP/1.1 201 CREATED
+	X-Powered-By: Express
+	Expires: -1
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 0
+	Vary: Accept-Encoding
+	Date: Tue, 21 Apr 2020 13:05:09 GMT
+	Connection: keep-alive
+
+3) Ver prenda en particular -------------
+Ruta REST:
+	Get /usuario/{id}/guardarropas/{id}/prendas/{id}
+
+Codigos de respuesta:
+	200, 404, 50X
+
+Posibles respuestas:
+HTTP/1.1 404 Not Found
+	X-Powered-By: Express
+	Expires: -1
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 0
+	Vary: Accept-Encoding
+	Date: Tue, 21 Apr 2020 12:43:18 GMT
+	Connection: keep-alive
+	----------------------
+	HTTP/1.1 200 OK
+	X-Powered-By: Express
+	Expires: -1
+	Content-Type: application/json; charset=utf-8
+	Content-Length: 1237
+	Vary: Accept-Encoding
+	Date: Tue, 21 Apr 2020 13:05:09 GMT
+	Connection: keep-alive
+	{
+		id: {id}
+		tipo: <tipo>
+		color: <color>
+		material: <material>
+	}
+	
+4) Eliminar prenda ----------------
+Ruta REST:
+	Delete /usuario/{id}/guardarropas/{id}/prendas/{id}
+
+Codigos de respuesta:
+	200, 404, 50X
+
+Posibles respuestas:
+HTTP/1.1 404 Not Found
+	X-Powered-By: Express
+	Expires: -1
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 0
+	Vary: Accept-Encoding
+	Date: Tue, 21 Apr 2020 12:43:18 GMT
+	Connection: keep-alive
+	----------------------
+	HTTP/1.1 200 OK
+	X-Powered-By: Express
+	Expires: -1
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 0
+	Vary: Accept-Encoding
+	Date: Tue, 21 Apr 2020 13:05:09 GMT
+	Connection: keep-alive
+
+5) Ver eventos --------------------
+Ruta REST:
+	Get /usuario/{id}/eventos
+
+Codigos de respuesta:
+	200, 404, 50X
+
+Posibles Respuestas:
+HTTP/1.1 404 Not Found
+	X-Powered-By: Express
+	Expires: -1
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 0
+	Vary: Accept-Encoding
+	Date: Tue, 21 Apr 2020 12:43:18 GMT
+	Connection: keep-alive
+	----------------------
+	HTTP/1.1 200 OK
+	X-Powered-By: Express
+	Expires: -1
+	Content-Type: application/json; charset=utf-8
+	Content-Length: 1237
+	Vary: Accept-Encoding
+	Date: Tue, 21 Apr 2020 13:05:09 GMT
+	Connection: keep-alive
+	{
+		id: {id}
+		descripcion : <descripcion>
+	}
+
+6) Ver sugerencias de prendas -------------
+Ruta REST:
+	Get /usuario/{id}/sugerencias
+
+Codigos de respuesta:
+	200, 404, 50X
+
+Posibles respuestas:
+	HTTP/1.1 404 Not Found
+	X-Powered-By: Express
+	Expires: -1
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 0
+	Vary: Accept-Encoding
+	Date: Tue, 21 Apr 2020 12:43:18 GMT
+	Connection: keep-alive
+	----------------------
+	HTTP/1.1 200 OK
+	X-Powered-By: Express
+	Expires: -1
+	Content-Type: application/json; charset=utf-8
+	Content-Length: 1237
+	Vary: Accept-Encoding
+	Date: Tue, 21 Apr 2020 13:05:09 GMT
+	Connection: keep-alive
+	[
+		{
+		id: {id}
+		tipo: <tipo>
+		color: <color>
+		material: <material>
+		},
+		{
+		id: {id}
+		tipo: <tipo>
+		color: <color>
+		material: <material>
+		}
+		...
+		{
+		id: {id}
+		tipo: <tipo>
+		color: <color>
+		material: <material>
+		}
+	]
